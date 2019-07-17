@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    linkedin_api (0.1.0)
+    linkedin_v2 (0.1.0)
       down (~> 4.8, >= 4.8.1)
       rest-client (~> 2.0, >= 2.0.2)
 
@@ -95,7 +95,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 2.0)
-  linkedin_api!
+  linkedin_v2!
   pry (~> 0.12.2)
   rake (~> 10.0)
   reek (~> 5.4)

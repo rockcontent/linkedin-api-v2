@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "linkedin_api"
+require "linkedin_v2"
 require "pry"
 
 RSpec.configure do |config|
