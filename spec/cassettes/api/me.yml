@@ -1,0 +1,211 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/me?projection=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '581'
+      Date:
+      - Mon, 29 Jul 2019 16:32:49 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - 7rkTotrttRXgaJfsWisAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564417968:t=1564492811:s=AQFlZ-6HcDkoPwD-It6kjekz0Aj6EEYV"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564417968:t=1564492811:s=AQFlZ-6HcDkoPwD-It6kjekz0Aj6EEYV"'
+    body:
+      encoding: UTF-8
+      string: '{"localizedLastName":"RC","lastName":{"localized":{"pt_BR":"RC"},"preferredLocale":{"country":"BR","language":"pt"}},"vanityName":"aplicativo-rc-110817144","localizedHeadline":"Senior
+        Web Application Developer na FAKE","firstName":{"localized":{"pt_BR":"Aplicativo"},"preferredLocale":{"country":"BR","language":"pt"}},"profilePicture":{"displayImage":"urn:li:digitalmediaAsset:C5103AQGM-ywdwancXA"},"id":"zdUs3lzI6l","headline":{"localized":{"pt_BR":"Senior
+        Web Application Developer na FAKE"},"preferredLocale":{"country":"BR","language":"pt"}},"localizedFirstName":"Aplicativo"}'
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 16:33:59 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/me?projection=(localizedFirstName)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '35'
+      Date:
+      - Mon, 29 Jul 2019 16:38:06 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - Mo4IbCTutRUgrNr6FSsAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564418285:t=1564492811:s=AQFLMV6_jjqS-KsaLaTP2o7zuoqzrYnC"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564418285:t=1564492811:s=AQFLMV6_jjqS-KsaLaTP2o7zuoqzrYnC"'
+    body:
+      encoding: UTF-8
+      string: '{"localizedFirstName":"Aplicativo"}'
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 16:39:16 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/me?projection=(incorrect%20query)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      X-Restli-Gateway-Error:
+      - 'true'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '84'
+      Date:
+      - Mon, 29 Jul 2019 16:38:40 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - FiQiZSzutRWAtFteGCsAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564418320:t=1564492811:s=AQGN-kA5yGxa2xBBGCUI8wGq66Ug8i3L"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564418320:t=1564492811:s=AQGN-kA5yGxa2xBBGCUI8wGq66Ug8i3L"'
+    body:
+      encoding: UTF-8
+      string: '{"serviceErrorCode":0,"message":"Expected to get '','', but got ''query''","status":400}'
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 16:39:50 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/me?projection=(localizedFirstNameE)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '2'
+      Date:
+      - Mon, 29 Jul 2019 16:39:11 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - XCI7kzPutRXg8rDsFysAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564418350:t=1564492811:s=AQG3nWBg-nJFm5vMS1GD5fJTEa2YV9kR"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564418350:t=1564492811:s=AQG3nWBg-nJFm5vMS1GD5fJTEa2YV9kR"'
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 16:40:21 GMT
+recorded_with: VCR 5.0.0

@@ -1,0 +1,264 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizations/22302249?projection=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '1327'
+      Date:
+      - Mon, 29 Jul 2019 13:56:44 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - dE3SJlbltRXA+7AKdSsAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564408603:t=1564492811:s=AQFSGVcBcFezOgLXcgkz-q04F9YcY4wr"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564408603:t=1564492811:s=AQFSGVcBcFezOgLXcgkz-q04F9YcY4wr"'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJkZXNjcmlwdGlvbiI6eyJsb2NhbGl6ZWQiOnsicHRfQlIiOiJTb21vcyB1bWEgZW1wcmVzYSBkZSBGZXN0YS5cbkZlc3RhIG8gZGlhIGludGVpcm8uXG5GZXN0YSB0b2RhIGhvcmEuIn0sInByZWZlcnJlZExvY2FsZSI6eyJjb3VudHJ5IjoiQlIiLCJsYW5ndWFnZSI6InB0In19LCJhbHRlcm5hdGl2ZU5hbWVzIjpbXSwic3BlY2lhbHRpZXMiOltdLCJzdGFmZkNvdW50UmFuZ2UiOiJTSVpFXzJfVE9fMTAiLCJsb2NhbGl6ZWRTcGVjaWFsdGllcyI6W10sImlkIjoyMjMwMjI0OSwibG9jYWxpemVkRGVzY3JpcHRpb24iOiJTb21vcyB1bWEgZW1wcmVzYSBkZSBGZXN0YS5cbkZlc3RhIG8gZGlhIGludGVpcm8uXG5GZXN0YSB0b2RhIGhvcmEuIiwibG9jYWxpemVkV2Vic2l0ZSI6Imh0dHA6Ly93d3cuYXBwZmVzdGEuY29tIiwibG9nb1YyIjp7Im9yaWdpbmFsIjoidXJuOmxpOmRpZ2l0YWxtZWRpYUFzc2V0OkM0RTBCQVFISTFmd0o5UzZ4QmciLCJjcm9wcGVkIjoidXJuOmxpOmRpZ2l0YWxtZWRpYUFzc2V0OkM0RTBCQVFISTFmd0o5UzZ4QmciLCJjcm9wSW5mbyI6eyJ4IjowLCJ3aWR0aCI6MCwieSI6MCwiaGVpZ2h0IjowfX0sInZhbml0eU5hbWUiOiJmZXN0YXByb21vw6fDtWVzZWV2ZW50b3MiLCJ3ZWJzaXRlIjp7ImxvY2FsaXplZCI6eyJlbl9VUyI6Imh0dHA6Ly93d3cuYXBwZmVzdGEuY29tIn0sInByZWZlcnJlZExvY2FsZSI6eyJjb3VudHJ5IjoiVVMiLCJsYW5ndWFnZSI6ImVuIn19LCJsb2NhbGl6ZWROYW1lIjoiRmVzdGEgcHJvbW/Dp8O1ZXMgZSBldmVudG9zIiwiZ3JvdXBzIjpbXSwidmVyc2lvblRhZyI6IjE2ODg1OTYzMTQiLCJkZWZhdWx0TG9jYWxlIjp7ImNvdW50cnkiOiJCUiIsImxhbmd1YWdlIjoicHQifSwib3JnYW5pemF0aW9uVHlwZSI6IlNFTEZfRU1QTE9ZRUQiLCJpbmR1c3RyaWVzIjpbInVybjpsaTppbmR1c3RyeToyOCJdLCJuYW1lIjp7ImxvY2FsaXplZCI6eyJwdF9CUiI6IkZlc3RhIHByb21vw6fDtWVzIGUgZXZlbnRvcyJ9LCJwcmVmZXJyZWRMb2NhbGUiOnsiY291bnRyeSI6IkJSIiwibGFuZ3VhZ2UiOiJwdCJ9fSwibG9jYXRpb25zIjpbeyJhZGRyZXNzIjp7Imdlb2dyYXBoaWNBcmVhIjoiTWluYXMgR2VyYWlzIiwiY291bnRyeSI6IkJSIiwiY2l0eSI6IkJlbG8gSG9yaXpvbnRlIiwicG9zdGFsQ29kZSI6IjMxMDAwLTAwMCIsImxpbmUxIjoiQWZvbnNvIFBlbmEifSwic3RhZmZDb3VudFJhbmdlIjoiU0laRV8xIiwiZ2VvTG9jYXRpb24iOiJ1cm46bGk6Z2VvOjEwMzM1NzQ3MSIsImxvY2F0aW9uVHlwZSI6IkhFQURRVUFSVEVSUyJ9XSwiJFVSTiI6InVybjpsaTpvcmdhbml6YXRpb246MjIzMDIyNDkifQ==
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 13:57:54 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizations/22302249?projection=(id,vanityName)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '55'
+      Date:
+      - Mon, 29 Jul 2019 14:09:59 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - mDJlWA/mtRVgyOblPisAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564409399:t=1564492811:s=AQHDL2VzJtYTaFR4onukRXKNR5BU5Cd6"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564409399:t=1564492811:s=AQHDL2VzJtYTaFR4onukRXKNR5BU5Cd6"'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJpZCI6MjIzMDIyNDksInZhbml0eU5hbWUiOiJmZXN0YXByb21vw6fDtWVzZWV2ZW50b3MifQ==
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 14:11:09 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?projection=(incorrect%20query)&q=roleAssignee
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      X-Restli-Gateway-Error:
+      - 'true'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '84'
+      Date:
+      - Mon, 29 Jul 2019 14:11:18 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - GjLc0SHmtRXAfU5xPysAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564409478:t=1564492811:s=AQEyoRuAYawcWb_teJ0ImJaqoffW_KS2"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564409478:t=1564492811:s=AQEyoRuAYawcWb_teJ0ImJaqoffW_KS2"'
+    body:
+      encoding: UTF-8
+      string: '{"serviceErrorCode":0,"message":"Expected to get '','', but got ''query''","status":400}'
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 14:12:28 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizations/22302249?projection=(vanityNameE)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '2'
+      Date:
+      - Mon, 29 Jul 2019 14:12:22 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - UnepuTDmtRUA8uXlPisAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564409542:t=1564492811:s=AQHOQV3805fHqdGTLMoZ7iN99JPnxubm"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564409542:t=1564492811:s=AQHOQV3805fHqdGTLMoZ7iN99JPnxubm"'
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 14:13:32 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizations/22302249?projection=(incorrect%20query)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      X-Restli-Gateway-Error:
+      - 'true'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '84'
+      Date:
+      - Mon, 29 Jul 2019 14:17:51 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - aSQmOn3mtRVgJB6fdSsAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564409871:t=1564492811:s=AQGqz8G48JgnHhA9eJCsR8mXWEZOFtK3"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564409871:t=1564492811:s=AQGqz8G48JgnHhA9eJCsR8mXWEZOFtK3"'
+    body:
+      encoding: UTF-8
+      string: '{"serviceErrorCode":0,"message":"Expected to get '','', but got ''query''","status":400}'
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 14:19:01 GMT
+recorded_with: VCR 5.0.0

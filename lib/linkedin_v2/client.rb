@@ -8,15 +8,6 @@ module LinkedinV2
     include LinkedinV2::Api::Organizations
     include LinkedinV2::Api::Profiles
     include LinkedinV2::Api::Medias
-    # include Helpers::Authorization
-    # include Api::QueryHelpers
-    # include Api::People
-    # include Api::Groups
-    # include Api::Companies
-    # include Api::Jobs
-    # include Api::ShareAndSocialStream
-    # include Api::Communications
-    # include Search
 
     attr_reader :token
 

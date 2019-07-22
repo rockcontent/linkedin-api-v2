@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://s3-us-west-2.amazonaws.com/rc2-development/img/branco.jpg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Down/4.8.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - j4auYwuMq0muxfwPWOnn6PxCaPSymxgZHTXqmQZim4NZTfhLMNjTHRXOd9P9oXIzcqL3G2QbWQc=
+      X-Amz-Request-Id:
+      - 06574F398E8BA2D5
+      Date:
+      - Mon, 29 Jul 2019 18:00:50 GMT
+      Last-Modified:
+      - Tue, 06 Jun 2017 13:54:04 GMT
+      Etag:
+      - '"89aa61afff1043ba8eba836d9e87e64f"'
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - image/jpeg
+      Content-Length:
+      - '1129'
+      Server:
+      - AmazonS3
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        /9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABQAAD/4QMtaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTI4OTM1Nzk0MkUzMTFFNzhEMEFCNkJERDRBN0M5OTAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTI4OTM1N0E0MkUzMTFFNzhEMEFCNkJERDRBN0M5OTAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBMjg5MzU3NzQyRTMxMUU3OEQwQUI2QkRENEE3Qzk5MCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBMjg5MzU3ODQyRTMxMUU3OEQwQUI2QkRENEE3Qzk5MCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAICAgICAgICAgIDAgICAwQDAgIDBAUEBAQEBAUGBQUFBQUFBgYHBwgHBwYJCQoKCQkMDAwMDAwMDAwMDAwMDAwBAwMDBQQFCQYGCQ0LCQsNDw4ODg4PDwwMDAwMDw8MDAwMDAwPDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIABAAEAMBEQACEQEDEQH/xABLAAEBAAAAAAAAAAAAAAAAAAAACQEBAAAAAAAAAAAAAAAAAAAAABABAAAAAAAAAAAAAAAAAAAAABEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Av4AAAD//2Q==
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 18:01:59 GMT
+- request:
+    method: post
+    uri: https://api.linkedin.com/media/upload
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        LS0tLS0tUnVieUZvcm1Cb3VuZGFyeWVCclUxdHUxYlNXTUM3SG0NCkNvbnRlbnQtRGlzcG9zaXRpb246IGZvcm0tZGF0YTsgbmFtZT0iZmlsZSI7IGZpbGVuYW1lPSJkb3duLW5ldF9odHRwMjAxOTA3MjktMzI3NDQtZG94Nm1kLmpwZyINCkNvbnRlbnQtVHlwZTogaW1hZ2UvanBlZw0KDQr/2P/hABhFeGlmAABJSSoACAAAAAAAAAAAAAAA/+wAEUR1Y2t5AAEABAAAAFAAAP/hAy1odHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBMjg5MzU3OTQyRTMxMUU3OEQwQUI2QkRENEE3Qzk5MCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBMjg5MzU3QTQyRTMxMUU3OEQwQUI2QkRENEE3Qzk5MCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkEyODkzNTc3NDJFMzExRTc4RDBBQjZCREQ0QTdDOTkwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkEyODkzNTc4NDJFMzExRTc4RDBBQjZCREQ0QTdDOTkwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAgICAgICAgICAgMCAgIDBAMCAgMEBQQEBAQEBQYFBQUFBQUGBgcHCAcHBgkJCgoJCQwMDAwMDAwMDAwMDAwMDAEDAwMFBAUJBgYJDQsJCw0PDg4ODg8PDAwMDAwPDwwMDAwMDA8MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM/8AAEQgAEAAQAwERAAIRAQMRAf/EAEsAAQEAAAAAAAAAAAAAAAAAAAAJAQEAAAAAAAAAAAAAAAAAAAAAEAEAAAAAAAAAAAAAAAAAAAAAEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwC/gAAAP//ZDQotLS0tLS1SdWJ5Rm9ybUJvdW5kYXJ5ZUJyVTF0dTFiU1dNQzdIbS0tDQo=
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer invalid_token
+      Content-Type:
+      - multipart/form-data; boundary=----RubyFormBoundaryeBrU1tu1bSWMC7Hm
+      Content-Length:
+      - '1337'
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      X-Restli-Gateway-Error:
+      - 'true'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '72'
+      Date:
+      - Mon, 29 Jul 2019 18:00:50 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - UU80RqjytRXAz+ucxioAAA==
+      Set-Cookie:
+      - lidc="b=VB59:g=2057:u=1:i=1564423250:t=1564509650:s=AQGWq579FB1DZvbiTFIG66GgI9MzhVXA"
+      X-Li-Route-Key:
+      - '"b=VB59:g=2057:u=1:i=1564423250:t=1564509650:s=AQGWq579FB1DZvbiTFIG66GgI9MzhVXA"'
+    body:
+      encoding: UTF-8
+      string: '{"serviceErrorCode":65600,"message":"Invalid access token","status":401}'
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 18:02:00 GMT
+recorded_with: VCR 5.0.0

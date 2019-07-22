@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.linkedin.com/v2/shares
+    body:
+      encoding: UTF-8
+      string: '{"owner":"urn:li:organization:22302249","content":{"contentEntities":[{"entityLocation":"https://rockcontent.com","thumbnails":[{"resolvedUrl":"https://s3-us-west-2.amazonaws.com/rc2-development/img/branco.jpg"}]}]},"distribution":{"linkedInDistributionTarget":{}},"text":{"text":"Example
+        from test"}}'
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      X-Restli-Protocol-Version:
+      - 2.0.0
+      Content-Length:
+      - '301'
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json
+      Location:
+      - "/sharesV2/6561636846789509120"
+      X-Restli-Id:
+      - '6561636846789509120'
+      X-Restli-Protocol-Version:
+      - 2.0.0
+      Content-Length:
+      - '626'
+      Date:
+      - Mon, 29 Jul 2019 16:02:13 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - iWN4Oy/stRUAI+1AwSoAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564416133:t=1564492811:s=AQFg3uobRX3q_PY21fByjJwiXF_ZJbwB"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564416133:t=1564492811:s=AQFg3uobRX3q_PY21fByjJwiXF_ZJbwB"'
+    body:
+      encoding: UTF-8
+      string: '{"owner":"urn:li:organization:22302249","activity":"urn:li:activity:6561636847183769600","edited":false,"created":{"actor":"urn:li:person:zdUs3lzI6l","time":1564416133603},"serviceProvider":"API","id":"6561636846789509120","lastModified":{"actor":"urn:li:csUser:0","time":1564416133670},"text":{"text":"Example
+        from test"},"distribution":{"linkedInDistributionTarget":{"visibleToGuest":true}},"content":{"contentEntities":[{"entityLocation":"https://rockcontent.com","thumbnails":[{"imageSpecificContent":{},"resolvedUrl":"https://s3-us-west-2.amazonaws.com/rc2-development/img/branco.jpg"}]}],"shareMediaCategory":"ARTICLE"}}'
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 16:03:23 GMT
+recorded_with: VCR 5.0.0

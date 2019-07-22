@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizations/22302249?projection=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer invalid_token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      X-Restli-Gateway-Error:
+      - 'true'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '72'
+      Date:
+      - Mon, 29 Jul 2019 14:22:05 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - Iurla7jmtRXgT5oC9CoAAA==
+      Set-Cookie:
+      - lidc="b=VB47:g=2223:u=1:i=1564410125:t=1564496525:s=AQFK2x756FuLeuGmsZftVWUZ3TTBQViZ"
+      X-Li-Route-Key:
+      - '"b=VB47:g=2223:u=1:i=1564410125:t=1564496525:s=AQFK2x756FuLeuGmsZftVWUZ3TTBQViZ"'
+    body:
+      encoding: UTF-8
+      string: '{"serviceErrorCode":65600,"message":"Invalid access token","status":401}'
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 14:23:15 GMT
+recorded_with: VCR 5.0.0

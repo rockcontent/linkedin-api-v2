@@ -1,0 +1,210 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?projection=&q=roleAssignee
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '337'
+      Date:
+      - Mon, 29 Jul 2019 19:33:41 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - 5TBueLn3tRXgQguGFSsAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564428821:t=1564492811:s=AQEHShnECwNQLBdi6sr_fOn3zgyUJybA"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564428821:t=1564492811:s=AQEHShnECwNQLBdi6sr_fOn3zgyUJybA"'
+    body:
+      encoding: UTF-8
+      string: '{"paging":{"count":10,"start":0,"links":[]},"elements":[{"role":"ADMINISTRATOR","roleAssignee":"urn:li:person:zdUs3lzI6l","state":"APPROVED","organizationalTarget":"urn:li:organization:14842120"},{"role":"ADMINISTRATOR","roleAssignee":"urn:li:person:zdUs3lzI6l","state":"APPROVED","organizationalTarget":"urn:li:organization:22302249"}]}'
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 19:34:51 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?projection=(elements*(organizationalTarget~(localizedName)))&q=roleAssignee
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '252'
+      Date:
+      - Mon, 29 Jul 2019 19:33:42 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - wqgFmrn3tRUguiAxGCsAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564428822:t=1564492811:s=AQE_6fT5-xP4fRQPt_0kaZUevyChKcFf"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564428822:t=1564492811:s=AQE_6fT5-xP4fRQPt_0kaZUevyChKcFf"'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlbGVtZW50cyI6W3sib3JnYW5pemF0aW9uYWxUYXJnZXR+Ijp7ImxvY2FsaXplZE5hbWUiOiJGZXN0YSBwcm9tb8Onw7VlcyBlIGV2ZW50b3MifSwib3JnYW5pemF0aW9uYWxUYXJnZXQiOiJ1cm46bGk6b3JnYW5pemF0aW9uOjIyMzAyMjQ5In0seyJvcmdhbml6YXRpb25hbFRhcmdldH4iOnsibG9jYWxpemVkTmFtZSI6IlRlY2ggTFREQSJ9LCJvcmdhbml6YXRpb25hbFRhcmdldCI6InVybjpsaTpvcmdhbml6YXRpb246MTQ4NDIxMjAifV19
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 19:34:52 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?projection=(incorrect%20query)&q=roleAssignee
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      X-Restli-Gateway-Error:
+      - 'true'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '84'
+      Date:
+      - Mon, 29 Jul 2019 19:33:42 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - FMM4s7n3tRXgl9q9FysAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564428822:t=1564492811:s=AQE_6fT5-xP4fRQPt_0kaZUevyChKcFf"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564428822:t=1564492811:s=AQE_6fT5-xP4fRQPt_0kaZUevyChKcFf"'
+    body:
+      encoding: UTF-8
+      string: '{"serviceErrorCode":0,"message":"Expected to get '','', but got ''query''","status":400}'
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 19:34:52 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?projection=(elementsS*(organizationalTarget~(localizedName)))&q=roleAssignee
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '2'
+      Date:
+      - Mon, 29 Jul 2019 19:33:43 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - fbMP0Ln3tRXgNOAjFisAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564428823:t=1564492811:s=AQHAmc6n5lPvlQmlDgY-4FHQnoOEKivW"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564428823:t=1564492811:s=AQHAmc6n5lPvlQmlDgY-4FHQnoOEKivW"'
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 19:34:53 GMT
+recorded_with: VCR 5.0.0
