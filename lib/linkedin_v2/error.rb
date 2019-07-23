@@ -13,4 +13,7 @@ module LinkedinV2
 
   # LinkedIn response error
   LinkedinResponseError = Class.new(Error)
+
+  # LinkedIn unauthorized error
+  LinkedinAccessDeniedError = Class.new(Error)
 end

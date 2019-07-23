@@ -5,8 +5,16 @@ module LinkedinV2
         attrs = [ params, additional_headers ].reject(&:empty?)
 
         JSON.parse(conn(api)[endpoint].public_send(method, *attrs))
-      rescue RestClient::ExceptionWithResponse => exception
-        raise LinkedinResponseError.new("response error", details: exception.response)
+      rescue RestClient::ExceptionWithResponse => response_error
+        raise LinkedinResponseError.new(
+          "response error",
+          details: response_error.response
+        )
+      rescue RestClient::Unauthorized, RestClient::Forbidden => unauthorized_error
+        raise LinkedinAccessDeniedError.new(
+          "access denied",
+          details: unauthorized_error.response
+        )
       end
 
       def conn(api)
