@@ -11,6 +11,7 @@ require_relative "linkedin_v2/version"
 require_relative "linkedin_v2/error"
 
 require_relative "linkedin_v2/helpers/handler"
+require_relative "linkedin_v2/helpers/url"
 
 require_relative "linkedin_v2/url/builder"
 

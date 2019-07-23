@@ -8,7 +8,7 @@ module LinkedinV2
       # key -> Symbol object - Name of method to get endpoint template
       # options -> Hash object - Each method needs a specific parameter
       def call(key, **options)
-        path = options.empty? ? send(key) : send(key, **options)
+        path = options.empty? ? send(key) : send(key, Helpers::Url.escape(**options))
 
         path.strip
       rescue NoMethodError, ArgumentError => exception
