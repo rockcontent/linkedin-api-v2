@@ -19,6 +19,7 @@ require_relative "linkedin_v2/templates/payloads/base"
 require_relative "linkedin_v2/templates/payloads/shares"
 require_relative "linkedin_v2/templates/payloads/ugc_post"
 
+require_relative "linkedin_v2/files/reader"
 require_relative "linkedin_v2/files/creator"
 require_relative "linkedin_v2/files/destroyer"
 
