@@ -1,3 +1,5 @@
+require_relative "response"
+
 module LinkedinV2
   module Url
     class Builder
@@ -18,38 +20,36 @@ module LinkedinV2
       private
 
       def shares
-        ERB.new(Files::Reader.(__method__)).result
+        Response[__method__]
       end
 
       def ugc_post
-        ERB.new(Files::Reader.(__method__)).result
+        Response[__method__]
       end
 
       # 'projection' - query to get specific attributes - optional
       def organizations(projection: nil)
-        ERB.new(Files::Reader.(__method__)).result_with_hash({ projection: projection })
+        Response[__method__, { projection: projection }]
       end
 
       # 'identifier' - organization id - required
       # 'projection' - query to get specific attributes - optional
       def company(identifier:, projection: nil)
-        ERB.new(
-          Files::Reader.(__method__)
-        ).result_with_hash({ identifier: identifier, projection: projection })
+        Response[__method__, { identifier: identifier, projection: projection }]
       end
 
       # 'identifier' - organization id - required
       def logo(identifier:)
-        ERB.new(Files::Reader.(__method__)).result_with_hash({ identifier: identifier })
+        Response[__method__, { identifier: identifier }]
       end
 
       def upload_image
-        ERB.new(Files::Reader.(__method__)).result
+        Response[__method__]
       end
 
       # 'projection' - query to get specific attributes - optional
       def me(projection: nil)
-        ERB.new(Files::Reader.(__method__)).result_with_hash({ projection: projection })
+        Response[__method__, { projection: projection }]
       end
     end
   end
