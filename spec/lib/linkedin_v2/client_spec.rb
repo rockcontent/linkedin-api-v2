@@ -350,7 +350,7 @@ describe LinkedinV2::Client do
                 "created" => { "actor" => a_value, "time" => a_value },
                 "serviceProvider" => "API",
                 "id" => a_value,
-                "lastModified" => { "actor" => a_value, "time" => a_value},
+                "lastModified" => { "actor" => a_value, "time" => a_value },
                 "text" => { "text" => "Example from test" },
                 "distribution" => {
                   "linkedInDistributionTarget" => { "visibleToGuest" => true }
@@ -392,7 +392,7 @@ describe LinkedinV2::Client do
                   "created" => { "actor" => a_value, "time" => a_value },
                   "serviceProvider" => "API",
                   "id" => a_value,
-                  "lastModified" => { "actor" => a_value, "time" => a_value},
+                  "lastModified" => { "actor" => a_value, "time" => a_value },
                   "text" => { "text" => "Example from test" },
                   "distribution" => {
                     "linkedInDistributionTarget" => { "visibleToGuest" => true }
@@ -597,22 +597,34 @@ describe LinkedinV2::Client do
                   "localizedLastName" => a_value,
                   "lastName" => {
                     "localized" => { "pt_BR" => a_value },
-                    "preferredLocale" => { "country" => a_value, "language" => a_value }},
+                    "preferredLocale" => {
+                      "country" => a_value,
+                      "language" => a_value,
+                    }
+                  },
                   "vanityName" => a_value,
                   "localizedHeadline" => a_value,
                   "firstName" => {
                     "localized" => {
-                      "pt_BR" => a_value
+                      "pt_BR" => a_value,
                     },
-                    "preferredLocale" => { "country" => a_value, "language" => a_value }},
+                    "preferredLocale" => {
+                      "country" => a_value,
+                      "language" => a_value,
+                    }
+                  },
                   "profilePicture" => { "displayImage" => a_value },
                   "id" => a_value,
                   "headline" => {
                     "localized" => {
-                      "pt_BR" => a_value
+                      "pt_BR" => a_value,
                     },
-                    "preferredLocale" => { "country" => a_value, "language" => a_value }},
-                  "localizedFirstName" => a_value
+                    "preferredLocale" => {
+                      "country" => a_value,
+                      "language" => a_value,
+                    }
+                  },
+                  "localizedFirstName" => a_value,
                 }
 
                 result = client.me(projection: projection)
@@ -667,14 +679,22 @@ describe LinkedinV2::Client do
                 "localizedLastName" => a_value,
                 "lastName" => {
                   "localized" => { "pt_BR" => a_value },
-                  "preferredLocale" => { "country" => a_value, "language" => a_value }},
+                  "preferredLocale" => {
+                    "country" => a_value,
+                    "language" => a_value,
+                  }
+                },
                 "vanityName" => a_value,
                 "localizedHeadline" => a_value,
                 "firstName" => {
                   "localized" => {
                     "pt_BR" => a_value
                   },
-                  "preferredLocale" => { "country" => a_value, "language" => a_value } },
+                  "preferredLocale" => {
+                    "country" => a_value,
+                    "language" => a_value
+                  }
+                },
                 "profilePicture" => { "displayImage" => a_value },
                 "id" => a_value,
                 "headline" => {
