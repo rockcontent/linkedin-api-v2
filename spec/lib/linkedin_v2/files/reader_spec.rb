@@ -9,11 +9,8 @@ describe LinkedinV2::Files::Creator do
       path = "/path"
       tempfile_mocked = double("tempfile", path: path)
       file_mocked = double("file")
-      filename = "img.jpg"
       allow(Down).to receive(:download).with(picture_url).and_return(tempfile_mocked)
-      allow(File).to receive(:basename).with(path).and_return(filename)
-      allow(FileUtils).to receive(:mv).with(path, "tmp/#{filename}").and_return(true)
-      allow(File).to receive(:new).with("tmp/#{filename}").and_return(file_mocked)
+      allow(File).to receive(:new).with(path).and_return(file_mocked)
 
       result = creator.(picture_url)
 
