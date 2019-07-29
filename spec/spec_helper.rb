@@ -3,6 +3,8 @@ require "linkedin_v2"
 require "webmock/rspec"
 require "pry"
 require File.expand_path("./support/vcr", __dir__)
+require "coveralls"
+Coveralls.wear!
 
 WebMock.disable_net_connect!(allow_localhost: true)
 WebMock.allow_net_connect!
