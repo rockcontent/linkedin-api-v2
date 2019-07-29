@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.linkedin.com/v2/ugcPosts
+    body:
+      encoding: UTF-8
+      string: '{"author":"urn:li:organization:22302249","lifecycleState":"PUBLISHED","specificContent":{"com.linkedin.ugc.ShareContent":{"shareCommentary":{"text":"Example
+        to post"},"shareMediaCategory":"NONE"}},"visibility":{"com.linkedin.ugc.MemberNetworkVisibility":"PUBLIC"}}'
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      X-Restli-Protocol-Version:
+      - 2.0.0
+      Content-Length:
+      - '264'
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json
+      Location:
+      - "/ugcPosts/urn%3Ali%3Ashare%3A6561642675823489024"
+      X-Restli-Id:
+      - urn:li:share:6561642675823489024
+      X-Restli-Protocol-Version:
+      - 2.0.0
+      Content-Length:
+      - '41'
+      Date:
+      - Mon, 29 Jul 2019 16:25:23 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - xu7Gz3LttRWAGG0pxioAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564417523:t=1564492811:s=AQFWdo4EP7HosxwK56EB-nyunlT0jQ3W"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564417523:t=1564492811:s=AQFWdo4EP7HosxwK56EB-nyunlT0jQ3W"'
+    body:
+      encoding: UTF-8
+      string: '{"id":"urn:li:share:6561642675823489024"}'
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 16:26:33 GMT
+recorded_with: VCR 5.0.0

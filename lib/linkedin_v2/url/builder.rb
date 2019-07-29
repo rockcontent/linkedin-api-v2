@@ -1,3 +1,5 @@
+require_relative "response"
+
 module LinkedinV2
   module Url
     class Builder
@@ -5,10 +7,10 @@ module LinkedinV2
         new.(key, options)
       end
 
-      # key -> Symbol object - Name of method to get endpoint template
+      # key -> Symbol object - Name of method to get endpoint Files::Reader.
       # options -> Hash object - Each method needs a specific parameter
       def call(key, **options)
-        path = options.empty? ? send(key) : send(key, **options)
+        path = options.empty? ? send(key) : send(key, Helpers::Url.escape(**options))
 
         path.strip
       rescue NoMethodError, ArgumentError => exception
@@ -18,47 +20,36 @@ module LinkedinV2
       private
 
       def shares
-        ERB.new(template(__method__)).result
+        Response[__method__]
       end
 
       def ugc_post
-        ERB.new(template(__method__)).result
+        Response[__method__]
       end
 
       # 'projection' - query to get specific attributes - optional
       def organizations(projection: nil)
-        ERB.new(template(__method__)).result_with_hash({ projection: projection })
+        Response[__method__, { projection: projection }]
       end
 
       # 'identifier' - organization id - required
       # 'projection' - query to get specific attributes - optional
       def company(identifier:, projection: nil)
-        ERB.new(
-          template(__method__)
-        ).result_with_hash({ identifier: identifier, projection: projection })
+        Response[__method__, { identifier: identifier, projection: projection }]
       end
 
       # 'identifier' - organization id - required
       def logo(identifier:)
-        ERB.new(template(__method__)).result_with_hash({ identifier: identifier })
+        Response[__method__, { identifier: identifier }]
       end
 
       def upload_image
-        ERB.new(template(__method__)).result
+        Response[__method__]
       end
 
       # 'projection' - query to get specific attributes - optional
       def me(projection: nil)
-        ERB.new(template(__method__)).result_with_hash({ projection: projection })
-      end
-
-      def template(name)
-        template_path = File.join(
-          File.dirname(__FILE__),
-          "../templates/endpoints/#{name}.erb"
-        )
-
-        File.read(template_path)
+        Response[__method__, { projection: projection }]
       end
     end
   end

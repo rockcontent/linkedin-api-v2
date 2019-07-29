@@ -1,6 +1,11 @@
 require "bundler/setup"
 require "linkedin_v2"
+require "webmock/rspec"
 require "pry"
+require File.expand_path("./support/vcr", __dir__)
+
+WebMock.disable_net_connect!(allow_localhost: true)
+WebMock.allow_net_connect!
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -12,4 +17,6 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  config.expose_dsl_globally = true
 end

@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.linkedin.com/v2/ugcPosts
+    body:
+      encoding: UTF-8
+      string: '{"author":"urn:li:organization:9999999","lifecycleState":"PUBLISHED","specificContent":{"com.linkedin.ugc.ShareContent":{"shareCommentary":{"text":"Sample
+        text - again!"},"shareMediaCategory":"NONE"}},"visibility":{"com.linkedin.ugc.MemberNetworkVisibility":"PUBLIC"}}'
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      X-Restli-Protocol-Version:
+      - 2.0.0
+      Content-Length:
+      - '268'
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json
+      X-Restli-Error-Response:
+      - 'true'
+      X-Restli-Gateway-Error:
+      - 'false'
+      X-Restli-Protocol-Version:
+      - 2.0.0
+      Content-Length:
+      - '147'
+      Date:
+      - Mon, 29 Jul 2019 16:29:12 GMT
+      X-Li-Fabric:
+      - prod-lva1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - 4HJYLajttRXgQGJtdysAAA==
+      Set-Cookie:
+      - lidc="b=VB08:g=2667:u=328:i=1564417752:t=1564492811:s=AQECwY97fkM2-OADgcka0QIRvLIOkZxV"
+      X-Li-Route-Key:
+      - '"b=VB08:g=2667:u=328:i=1564417752:t=1564492811:s=AQECwY97fkM2-OADgcka0QIRvLIOkZxV"'
+    body:
+      encoding: UTF-8
+      string: '{"message":"com.linkedin.publishing.util.common.ResponseException:
+        Member is unauthorized to create UserGeneratedContent isDSC=false","status":401}'
+    http_version: 
+  recorded_at: Mon, 29 Jul 2019 16:30:22 GMT
+recorded_with: VCR 5.0.0
