@@ -7,3 +7,6 @@ detectors:
     enabled: false
   MissingSafeMethod:
     enabled: false
+  UncommunicativeModuleName:
+    enabled: false
+
