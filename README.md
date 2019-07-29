@@ -1,5 +1,5 @@
 # LinkedinApi
-
+[![Build Status](https://travis-ci.org/rockcontent/linkedin-api-v2.svg?branch=master)](https://travis-ci.org/rockcontent/linkedin-api-v2)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/447640e487cb4db793d32a89be154dfe)](https://app.codacy.com/app/lucasteles22/linkedin-api-v2?utm_source=github.com&utm_medium=referral&utm_content=rockcontent/linkedin-api-v2&utm_campaign=Badge_Grade_Settings)
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/linkedin_v2`. To experiment with that code, run `bin/console` for an interactive prompt.
