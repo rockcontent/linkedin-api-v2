@@ -17,7 +17,7 @@ module LinkedinV2
         end
 
         def deep_merge(first, second)
-          merger = proc { |key, element1, element2|
+          merger = proc { |_key, element1, element2|
             if Hash === element1 && Hash === element2
               element1.merge(element2, &merger)
             else
