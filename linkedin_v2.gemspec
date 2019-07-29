@@ -6,8 +6,8 @@ require "linkedin_v2/version"
 Gem::Specification.new do |spec|
   spec.name          = "linkedin_v2"
   spec.version       = LinkedinV2::VERSION
-  spec.authors       = ["Lucas Teles"]
-  spec.email         = ["lucasteles22@gmail.com"]
+  spec.authors       = [ "Lucas Teles" ]
+  spec.email         = [ "lucasteles22@gmail.com" ]
 
   spec.summary       = %q{Ruby wrapper for the LinkedIn API V2}
   spec.description   = %q{This gem interfaces with the LinkedIn REST API V2}
@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   end
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = [ "lib" ]
 
   spec.add_dependency "rest-client", "~> 2.0", ">= 2.0.2"
   spec.add_dependency "down", "~> 4.8", ">= 4.8.1"
