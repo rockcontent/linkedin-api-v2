@@ -14,7 +14,9 @@ module LinkedinV2
 
         def payload
           response = body
-          response = deep_merge(response, picture_attribute) if Helpers::Attribute.present?(picture)
+          if Helpers::Attribute.present?(picture)
+            response = Helpers::Hash.deep_merge(response, picture_attribute)
+          end
 
           response
         end

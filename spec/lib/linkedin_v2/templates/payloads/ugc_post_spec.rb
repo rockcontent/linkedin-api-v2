@@ -73,10 +73,10 @@ describe LinkedinV2::Templates::Payloads::UgcPost do
       end
     end
 
-    context "when picture_url parameter is given" do
+    context "when picture parameter is given" do
       it "responds successfully with a JSON object" do
-        default_attrs.merge!(picture_url: "picture_url")
-        expected_response = "{\"author\":\"urn:li:entity:identifier\",\"lifecycleState\":\"PUBLISHED\",\"specificContent\":{\"com.linkedin.ugc.ShareContent\":{\"shareCommentary\":{\"text\":\"text\"},\"shareMediaCategory\":\"NONE\"}},\"visibility\":{\"com.linkedin.ugc.MemberNetworkVisibility\":\"PUBLIC\"}}"
+        default_attrs.merge!(picture: "picture_url")
+        expected_response = "{\"author\":\"urn:li:entity:identifier\",\"lifecycleState\":\"PUBLISHED\",\"specificContent\":{\"com.linkedin.ugc.ShareContent\":{\"shareCommentary\":{\"text\":\"text\"},\"shareMediaCategory\":\"IMAGE\",\"media\":[{\"media\":\"picture_url\",\"status\":\"READY\"}]}},\"visibility\":{\"com.linkedin.ugc.MemberNetworkVisibility\":\"PUBLIC\"}}"
         body = payload.new(default_attrs)
 
         result = body.to_json
@@ -85,7 +85,7 @@ describe LinkedinV2::Templates::Payloads::UgcPost do
       end
     end
 
-    context "when picture_url parameter is not given" do
+    context "when picture parameter is not given" do
       it "responds successfully with a JSON object" do
         expected_response = "{\"author\":\"urn:li:entity:identifier\",\"lifecycleState\":\"PUBLISHED\",\"specificContent\":{\"com.linkedin.ugc.ShareContent\":{\"shareCommentary\":{\"text\":\"text\"},\"shareMediaCategory\":\"NONE\"}},\"visibility\":{\"com.linkedin.ugc.MemberNetworkVisibility\":\"PUBLIC\"}}"
         body = payload.new(default_attrs)
