@@ -23,6 +23,4 @@ require_relative "linkedin_v2/files/reader"
 require_relative "linkedin_v2/files/creator"
 require_relative "linkedin_v2/files/destroyer"
 
-require_relative "linkedin_v2/api"
-
 require_relative "linkedin_v2/client"
