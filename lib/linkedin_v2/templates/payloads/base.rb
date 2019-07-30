@@ -12,10 +12,6 @@ module LinkedinV2
 
         protected
 
-        def has_attr?(attr)
-          !(attr.nil? || attr.empty?)
-        end
-
         def deep_merge(first, second)
           merger = proc { |_key, element1, element2|
             if Hash === element1 && Hash === element2
