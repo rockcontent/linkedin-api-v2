@@ -5,8 +5,8 @@ module LinkedinV2
 
       # Retrieve information about organizations
       # https://docs.microsoft.com/en-us/linkedin/marketing/integrations/community-management/organizations/organization-access-control
-      def organizations(projection: nil)
-        params = { projection: projection }
+      def organizations(projection: nil, start: nil, count: nil)
+        params = { projection: projection, start: start, count: count }
         path = LinkedinV2::Url::Builder.(:organizations, params)
 
         request(:get, path)

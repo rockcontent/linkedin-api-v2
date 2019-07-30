@@ -30,7 +30,7 @@ describe LinkedinV2::Url::Builder do
           it "succeeds" do
             projection = "(foo)"
             mock_cgi_response = "mock"
-            expected_response = "/organizationalEntityAcls?q=roleAssignee&projection=#{mock_cgi_response}"
+            expected_response = "/organizationalEntityAcls?q=roleAssignee&projection=#{mock_cgi_response}&start=&count="
             allow(CGI).to receive(:escape).and_return(mock_cgi_response)
 
             result = builder.(:organizations, projection: projection)
@@ -39,9 +39,97 @@ describe LinkedinV2::Url::Builder do
           end
         end
 
-        context "when projection is not given" do
+        context "when start is given" do
           it "succeeds" do
-            expected_response = "/organizationalEntityAcls?q=roleAssignee&projection="
+            start = "1"
+            mock_cgi_response = "1"
+            expected_response = "/organizationalEntityAcls?q=roleAssignee&projection=&start=#{mock_cgi_response}&count="
+            allow(CGI).to receive(:escape).and_return(mock_cgi_response)
+
+            result = builder.(:organizations, start: start)
+
+            expect(result).to eq(expected_response)
+          end
+        end
+
+        context "when count is given" do
+          it "succeeds" do
+            count = "10"
+            mock_cgi_response = "10"
+            expected_response = "/organizationalEntityAcls?q=roleAssignee&projection=&start=&count=#{mock_cgi_response}"
+            allow(CGI).to receive(:escape).and_return(mock_cgi_response)
+
+            result = builder.(:organizations, count: count)
+
+            expect(result).to eq(expected_response)
+          end
+        end
+
+        context "when count and start are given" do
+          it "succeeds" do
+            start = "1"
+            count = "1"
+            mock_cgi_response = "1"
+            expected_response = "/organizationalEntityAcls?q=roleAssignee&projection=&start=#{mock_cgi_response}&count=#{mock_cgi_response}"
+            allow(CGI).to receive(:escape).and_return(mock_cgi_response)
+
+            result = builder.(:organizations, count: count, start: start)
+
+            expect(result).to eq(expected_response)
+          end
+        end
+
+        context "when projection and start are given" do
+          it "succeeds" do
+            start = "1"
+            projection = "(foo)"
+            mock_cgi_response = "1"
+            expected_response = "/organizationalEntityAcls?q=roleAssignee&projection=#{mock_cgi_response}&start=#{mock_cgi_response}&count="
+            allow(CGI).to receive(:escape).and_return(mock_cgi_response)
+
+            result = builder.(:organizations, projection: projection, start: start)
+
+            expect(result).to eq(expected_response)
+          end
+        end
+
+        context "when projection and count are given" do
+          it "succeeds" do
+            count = "1"
+            projection = "(foo)"
+            mock_cgi_response = "1"
+            expected_response = "/organizationalEntityAcls?q=roleAssignee&projection=#{mock_cgi_response}&start=&count=#{mock_cgi_response}"
+            allow(CGI).to receive(:escape).and_return(mock_cgi_response)
+
+            result = builder.(:organizations, projection: projection, count: count)
+
+            expect(result).to eq(expected_response)
+          end
+        end
+
+        context "when projection, start and count are given" do
+          it "succeeds" do
+            start = "1"
+            count = "1"
+            projection = "(foo)"
+            mock_cgi_response = "1"
+            expected_response = "/organizationalEntityAcls?q=roleAssignee&projection=#{mock_cgi_response}&start=#{mock_cgi_response}&count=#{mock_cgi_response}"
+            allow(CGI).to receive(:escape).and_return(mock_cgi_response)
+
+            result = builder.(
+              :organizations,
+              projection: projection,
+              count: count,
+              start: start
+            )
+
+            expect(result).to eq(expected_response)
+          end
+        end
+
+        context "when no parameter is given" do
+          it "succeeds" do
+            expected_response = "/organizationalEntityAcls?q=roleAssignee&projection=&start=&count="
 
             result = builder.(:organizations)
 

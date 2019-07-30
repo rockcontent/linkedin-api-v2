@@ -91,7 +91,176 @@ describe LinkedinV2::Client do
             end
           end
 
-          context "when projection is not given" do
+          context "when start is given" do
+            context "but value is empty" do
+              it "returns linkedin response default" do
+                client = LinkedinV2::Client.new(token: valid_token)
+                start = ""
+                expected_response = {
+                  "elements" => [
+                    {
+                      "role" => "ADMINISTRATOR",
+                      "roleAssignee" => a_value,
+                      "state" => "APPROVED",
+                      "organizationalTarget" => a_value,
+                    },
+                    {
+                      "role" => "ADMINISTRATOR",
+                      "roleAssignee" => a_value,
+                      "state" => "APPROVED",
+                      "organizationalTarget" => a_value
+                    }
+                  ],
+                  "paging" => { "count" => 10, "start" => 0, "links" => [] }
+                }
+
+                result = client.organizations(start: start)
+
+                expect(result).to match(expected_response)
+              end
+            end
+
+            context "but value is a correct start" do
+              context "when page is within the limit" do
+                it "returns paginated response" do
+                  client = LinkedinV2::Client.new(token: valid_token)
+                  start = "0"
+                  expected_response = {
+                    "elements" => [
+                      {
+                        "role" => "ADMINISTRATOR",
+                        "roleAssignee" => a_value,
+                        "state" => "APPROVED",
+                        "organizationalTarget" => a_value,
+                      },
+                      {
+                        "role" => "ADMINISTRATOR",
+                        "roleAssignee" => a_value,
+                        "state" => "APPROVED",
+                        "organizationalTarget" => a_value
+                      }
+                    ],
+                    "paging" => { "count" => 10, "start" => 0, "links" => [] }
+                  }
+
+                  result = client.organizations(start: start)
+
+                  expect(result).to match(expected_response)
+                end
+              end
+
+              context "when page is not within the limit" do
+                it "returns empty elements as response" do
+                  client = LinkedinV2::Client.new(token: valid_token)
+                  start = "10"
+                  expected_response = {
+                    "paging" => {
+                      "count" => 10,
+                      "start" => 10,
+                      "links" => [
+                        {
+                          "rel" => "prev",
+                          "href" => "/v2/organizationalEntityAcls?count=10&projection=&q=roleAssignee&start=0",
+                          "type" => "application/json"
+                        }
+                      ]
+                    },
+                    "elements" => []
+                  }
+
+                  result = client.organizations(start: start)
+
+                  expect(result).to match(expected_response)
+                end
+              end
+            end
+
+            context "but value is a incorrect start" do
+              it "raises LinkedinResponseError" do
+                client = LinkedinV2::Client.new(token: valid_token)
+                start = "(incorrect query)"
+
+                expect {
+                  client.organizations(start: start)
+                }.to raise_error(LinkedinV2::LinkedinResponseError)
+              end
+            end
+          end
+
+          context "when count is given" do
+            context "but value is empty" do
+              it "returns linkedin response default" do
+                client = LinkedinV2::Client.new(token: valid_token)
+                count = ""
+                expected_response = {
+                  "elements" => [
+                    {
+                      "role" => "ADMINISTRATOR",
+                      "roleAssignee" => a_value,
+                      "state" => "APPROVED",
+                      "organizationalTarget" => a_value,
+                    },
+                    {
+                      "role" => "ADMINISTRATOR",
+                      "roleAssignee" => a_value,
+                      "state" => "APPROVED",
+                      "organizationalTarget" => a_value
+                    }
+                  ],
+                  "paging" => { "count" => 10, "start" => 0, "links" => [] }
+                }
+
+                result = client.organizations(count: count)
+
+                expect(result).to match(expected_response)
+              end
+            end
+
+            context "but value is a correct count" do
+              it "returns the number of elements" do
+                client = LinkedinV2::Client.new(token: valid_token)
+                count = "1"
+                expected_response = {
+                  "paging" => {
+                    "count" => 1,
+                    "start" => 0,
+                    "links" => [
+                      {
+                        "rel" => "next",
+                        "href" => "/v2/organizationalEntityAcls?count=1&projection=&q=roleAssignee&start=1",
+                        "type" => "application/json"
+                      }
+                    ]
+                  },
+                  "elements" => [
+                    {
+                      "role" => "ADMINISTRATOR",
+                      "roleAssignee" => a_value,
+                      "state" => "APPROVED",
+                      "organizationalTarget" => a_value
+                    }
+                  ]
+                }
+
+                result = client.organizations(count: count)
+
+                expect(result).to match(expected_response)
+              end
+            end
+
+            context "but value is a incorrect start" do
+              it "raises LinkedinResponseError" do
+                client = LinkedinV2::Client.new(token: valid_token)
+                count = "(incorrect query)"
+
+                expect {
+                  client.organizations(count: count)
+                }.to raise_error(LinkedinV2::LinkedinResponseError)
+              end
+            end
+          end
+
+          context "when no parameter is given" do
             it "returns linkedin response default" do
               client = LinkedinV2::Client.new(token: valid_token)
               expected_response = {
