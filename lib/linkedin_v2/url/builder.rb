@@ -28,8 +28,8 @@ module LinkedinV2
       end
 
       # 'projection' - query to get specific attributes - optional
-      def organizations(projection: nil)
-        Response[__method__, { projection: projection }]
+      def organizations(projection: nil, start: nil, count: nil)
+        Response[__method__, { projection: projection, start: start, count: count }]
       end
 
       # 'identifier' - organization id - required

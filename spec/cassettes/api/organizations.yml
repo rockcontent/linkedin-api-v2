@@ -207,4 +207,533 @@ http_interactions:
       string: "{}"
     http_version: 
   recorded_at: Mon, 29 Jul 2019 19:34:53 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?count=&projection=&q=roleAssignee&start=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '337'
+      Date:
+      - Wed, 31 Jul 2019 15:43:41 GMT
+      X-Li-Fabric:
+      - prod-lor1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - R0kBelWIthVAOk1YOisAAA==
+      Set-Cookie:
+      - lidc="b=OB08:g=2136:u=331:i=1564587821:t=1564670981:s=AQGh2hOEvAn0amsh2oES5dLDwbqoH0xM"
+      X-Li-Route-Key:
+      - '"b=OB08:g=2136:u=331:i=1564587821:t=1564670981:s=AQGh2hOEvAn0amsh2oES5dLDwbqoH0xM"'
+    body:
+      encoding: UTF-8
+      string: '{"paging":{"count":10,"start":0,"links":[]},"elements":[{"role":"ADMINISTRATOR","roleAssignee":"urn:li:person:zdUs3lzI6l","state":"APPROVED","organizationalTarget":"urn:li:organization:22302249"},{"role":"ADMINISTRATOR","roleAssignee":"urn:li:person:zdUs3lzI6l","state":"APPROVED","organizationalTarget":"urn:li:organization:14842120"}]}'
+    http_version: 
+  recorded_at: Wed, 31 Jul 2019 15:44:53 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?count=&projection=(elements*(organizationalTarget~(localizedName)))&q=roleAssignee&start=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '252'
+      Date:
+      - Wed, 31 Jul 2019 15:43:42 GMT
+      X-Li-Fabric:
+      - prod-lor1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - Xh/JnVWIthUgtBVSOysAAA==
+      Set-Cookie:
+      - lidc="b=OB08:g=2136:u=331:i=1564587821:t=1564670981:s=AQGh2hOEvAn0amsh2oES5dLDwbqoH0xM"
+      X-Li-Route-Key:
+      - '"b=OB08:g=2136:u=331:i=1564587821:t=1564670981:s=AQGh2hOEvAn0amsh2oES5dLDwbqoH0xM"'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJlbGVtZW50cyI6W3sib3JnYW5pemF0aW9uYWxUYXJnZXR+Ijp7ImxvY2FsaXplZE5hbWUiOiJGZXN0YSBwcm9tb8Onw7VlcyBlIGV2ZW50b3MifSwib3JnYW5pemF0aW9uYWxUYXJnZXQiOiJ1cm46bGk6b3JnYW5pemF0aW9uOjIyMzAyMjQ5In0seyJvcmdhbml6YXRpb25hbFRhcmdldH4iOnsibG9jYWxpemVkTmFtZSI6IlRlY2ggTFREQSJ9LCJvcmdhbml6YXRpb25hbFRhcmdldCI6InVybjpsaTpvcmdhbml6YXRpb246MTQ4NDIxMjAifV19
+    http_version: 
+  recorded_at: Wed, 31 Jul 2019 15:44:53 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?count=&projection=(incorrect%20query)&q=roleAssignee&start=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      X-Restli-Gateway-Error:
+      - 'true'
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '84'
+      Date:
+      - Wed, 31 Jul 2019 15:43:42 GMT
+      X-Li-Fabric:
+      - prod-lor1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - 7bKRw1WIthVgCsWpOysAAA==
+      Set-Cookie:
+      - lidc="b=OB08:g=2136:u=331:i=1564587822:t=1564670981:s=AQGqR6dth0_u5xL8v52ArbD1JHRZ9u4F"
+      X-Li-Route-Key:
+      - '"b=OB08:g=2136:u=331:i=1564587822:t=1564670981:s=AQGqR6dth0_u5xL8v52ArbD1JHRZ9u4F"'
+    body:
+      encoding: UTF-8
+      string: '{"serviceErrorCode":0,"message":"Expected to get '','', but got ''query''","status":400}'
+    http_version: 
+  recorded_at: Wed, 31 Jul 2019 15:44:54 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?count=&projection=(elementsS*(organizationalTarget~(localizedName)))&q=roleAssignee&start=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '2'
+      Date:
+      - Wed, 31 Jul 2019 15:43:43 GMT
+      X-Li-Fabric:
+      - prod-lor1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - RMHB6FWIthVg/0VCPCsAAA==
+      Set-Cookie:
+      - lidc="b=OB08:g=2136:u=331:i=1564587823:t=1564670981:s=AQEyQozsi52d_ZszDNDqEyob5XwZieej"
+      X-Li-Route-Key:
+      - '"b=OB08:g=2136:u=331:i=1564587823:t=1564670981:s=AQEyQozsi52d_ZszDNDqEyob5XwZieej"'
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Wed, 31 Jul 2019 15:44:54 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?count=&projection=&q=roleAssignee&start=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '337'
+      Date:
+      - Wed, 31 Jul 2019 15:48:47 GMT
+      X-Li-Fabric:
+      - prod-lor1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - mdDCqJyIthWgl9w19SoAAA==
+      Set-Cookie:
+      - lidc="b=OB08:g=2136:u=331:i=1564588127:t=1564670981:s=AQEinDCYLIQrDOyFdGnx_rGMzNLxJyLK"
+      X-Li-Route-Key:
+      - '"b=OB08:g=2136:u=331:i=1564588127:t=1564670981:s=AQEinDCYLIQrDOyFdGnx_rGMzNLxJyLK"'
+    body:
+      encoding: UTF-8
+      string: '{"paging":{"count":10,"start":0,"links":[]},"elements":[{"role":"ADMINISTRATOR","roleAssignee":"urn:li:person:zdUs3lzI6l","state":"APPROVED","organizationalTarget":"urn:li:organization:14842120"},{"role":"ADMINISTRATOR","roleAssignee":"urn:li:person:zdUs3lzI6l","state":"APPROVED","organizationalTarget":"urn:li:organization:22302249"}]}'
+    http_version: 
+  recorded_at: Wed, 31 Jul 2019 15:49:58 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?count=&projection=&q=roleAssignee&start=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '319'
+      Date:
+      - Wed, 31 Jul 2019 15:51:10 GMT
+      X-Li-Fabric:
+      - prod-lor1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - ptxL5r2IthWAd8k09SoAAA==
+      Set-Cookie:
+      - lidc="b=OB08:g=2136:u=331:i=1564588269:t=1564670981:s=AQH-H6Znn8NkLpz3xaIX8aRXh_nZBXV4"
+      X-Li-Route-Key:
+      - '"b=OB08:g=2136:u=331:i=1564588269:t=1564670981:s=AQH-H6Znn8NkLpz3xaIX8aRXh_nZBXV4"'
+    body:
+      encoding: UTF-8
+      string: '{"paging":{"count":10,"start":1,"links":[{"rel":"prev","href":"/v2/organizationalEntityAcls?count=10&projection=&q=roleAssignee&start=0","type":"application/json"}]},"elements":[{"role":"ADMINISTRATOR","roleAssignee":"urn:li:person:zdUs3lzI6l","state":"APPROVED","organizationalTarget":"urn:li:organization:22302249"}]}'
+    http_version: 
+  recorded_at: Wed, 31 Jul 2019 15:52:21 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?count=&projection=&q=roleAssignee&start=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '181'
+      Date:
+      - Wed, 31 Jul 2019 15:52:49 GMT
+      X-Li-Fabric:
+      - prod-lor1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - fJ6lF9WIthVAJFe68yoAAA==
+      Set-Cookie:
+      - lidc="b=OB08:g=2136:u=331:i=1564588369:t=1564670981:s=AQFEL7KAWlzQBcfjGOqpAI0javHVgGCP"
+      X-Li-Route-Key:
+      - '"b=OB08:g=2136:u=331:i=1564588369:t=1564670981:s=AQFEL7KAWlzQBcfjGOqpAI0javHVgGCP"'
+    body:
+      encoding: UTF-8
+      string: '{"paging":{"count":10,"start":10,"links":[{"rel":"prev","href":"/v2/organizationalEntityAcls?count=10&projection=&q=roleAssignee&start=0","type":"application/json"}]},"elements":[]}'
+    http_version: 
+  recorded_at: Wed, 31 Jul 2019 15:54:01 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?count=&projection=&q=roleAssignee&start=(incorrect%20query)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Jul 2019 15:59:00 GMT
+      Server:
+      - Play
+      X-Linkedin-Error-Response:
+      - 'true'
+      X-Restli-Gateway-Error:
+      - 'false'
+      X-Restli-Protocol-Version:
+      - 1.0.0
+      Content-Length:
+      - '71'
+      X-Li-Fabric:
+      - prod-lor1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - yfrGUiuJthXA4DXFHSsAAA==
+      Set-Cookie:
+      - lidc="b=OB08:g=2136:u=331:i=1564588739:t=1564670981:s=AQFLVcgwy7AwuFVfHaXDTJjcq3AdEhVS"
+      X-Li-Route-Key:
+      - '"b=OB08:g=2136:u=331:i=1564588739:t=1564670981:s=AQFLVcgwy7AwuFVfHaXDTJjcq3AdEhVS"'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Invalid (non-integer) start/count parameters","status":400}'
+    http_version: 
+  recorded_at: Wed, 31 Jul 2019 16:00:11 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?count=1&projection=&q=roleAssignee&start=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '317'
+      Date:
+      - Wed, 31 Jul 2019 16:01:56 GMT
+      X-Li-Fabric:
+      - prod-lor1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - i6XlU1SJthWg+iNcHysAAA==
+      Set-Cookie:
+      - lidc="b=OB08:g=2136:u=331:i=1564588915:t=1564670981:s=AQGdvJ9wbOIdfMw2722gx1O7K850Goxo"
+      X-Li-Route-Key:
+      - '"b=OB08:g=2136:u=331:i=1564588915:t=1564670981:s=AQGdvJ9wbOIdfMw2722gx1O7K850Goxo"'
+    body:
+      encoding: UTF-8
+      string: '{"paging":{"count":1,"start":0,"links":[{"rel":"next","href":"/v2/organizationalEntityAcls?count=1&projection=&q=roleAssignee&start=1","type":"application/json"}]},"elements":[{"role":"ADMINISTRATOR","roleAssignee":"urn:li:person:zdUs3lzI6l","state":"APPROVED","organizationalTarget":"urn:li:organization:14842120"}]}'
+    http_version: 
+  recorded_at: Wed, 31 Jul 2019 16:03:07 GMT
+- request:
+    method: get
+    uri: https://api.linkedin.com/v2/organizationalEntityAcls?count=(incorrect%20query)&projection=&q=roleAssignee&start=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - rest-client/2.0.2 (linux-gnu x86_64) ruby/2.6.3p62
+      Authorization:
+      - Bearer token
+      Content-Type:
+      - application/json
+      Host:
+      - api.linkedin.com
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      X-Li-Responseorigin:
+      - RGW
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Jul 2019 16:04:31 GMT
+      Server:
+      - Play
+      X-Linkedin-Error-Response:
+      - 'true'
+      X-Restli-Gateway-Error:
+      - 'false'
+      X-Restli-Protocol-Version:
+      - 1.0.0
+      Content-Length:
+      - '71'
+      X-Li-Fabric:
+      - prod-lor1
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - prod-esp2
+      X-Li-Proto:
+      - http/1.1
+      X-Li-Uuid:
+      - Ob6YYHiJthVAYCJpHSsAAA==
+      Set-Cookie:
+      - lidc="b=OB08:g=2136:u=331:i=1564589070:t=1564670981:s=AQF4DkYmm6_JM3pYq5xp7lIJKNIGiJRH"
+      X-Li-Route-Key:
+      - '"b=OB08:g=2136:u=331:i=1564589070:t=1564670981:s=AQF4DkYmm6_JM3pYq5xp7lIJKNIGiJRH"'
+    body:
+      encoding: UTF-8
+      string: '{"message":"Invalid (non-integer) start/count parameters","status":400}'
+    http_version: 
+  recorded_at: Wed, 31 Jul 2019 16:05:42 GMT
 recorded_with: VCR 5.0.0
