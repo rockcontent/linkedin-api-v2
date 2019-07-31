@@ -14,8 +14,12 @@ module LinkedinV2
 
         def payload
           response = body
-          response = deep_merge(response, description_attribute) if Helpers::Attribute.present?(description)
-          response = deep_merge(response, title_attribute) if Helpers::Attribute.present?(title)
+          if Helpers::Attribute.present?(description)
+            response = Helpers::Hash.deep_merge(response, description_attribute)
+          end
+          if Helpers::Attribute.present?(title)
+            response = Helpers::Hash.deep_merge(response, title_attribute)
+          end
 
           response
         end
