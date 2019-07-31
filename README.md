@@ -5,7 +5,6 @@ Ruby wrapper for the [V2 LinkedIn API](https://docs.microsoft.com/en-us/linkedin
 [![Build Status](https://travis-ci.org/rockcontent/linkedin-api-v2.svg?branch=master)](https://travis-ci.org/rockcontent/linkedin-api-v2)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/447640e487cb4db793d32a89be154dfe)](https://app.codacy.com/app/lucasteles22/linkedin-api-v2?utm_source=github.com&utm_medium=referral&utm_content=rockcontent/linkedin-api-v2&utm_campaign=Badge_Grade_Settings)
 
-
 ## Installation
 
 Add this line to your application's Gemfile:
