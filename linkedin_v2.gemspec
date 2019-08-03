@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Ruby wrapper for the LinkedIn API V2}
   spec.description   = %q{This gem interfaces with the LinkedIn REST API V2}
-  spec.homepage      = "https://rockcontent.com"
+  spec.homepage      = "https://github.com/rockcontent/linkedin-api-v2"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -19,6 +19,8 @@ Gem::Specification.new do |spec|
   if spec.respond_to?(:metadata)
 
     spec.metadata["homepage_uri"] = spec.homepage
+    spec.metadata["wiki_uri"] = "https://github.com/rockcontent/linkedin-api-v2/wiki"
+    spec.metadata["changelog_uri"] = "https://github.com/rockcontent/linkedin-api-v2/releases"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
