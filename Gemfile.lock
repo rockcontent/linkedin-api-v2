@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    linkedin_v2 (1.0.0)
+    linkedin_v2 (1.0.1)
       down (~> 4.8, >= 4.8.1)
       rest-client (~> 2.0, >= 2.0.2)
 
