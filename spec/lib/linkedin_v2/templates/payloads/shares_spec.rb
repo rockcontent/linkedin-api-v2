@@ -9,7 +9,7 @@ describe LinkedinV2::Templates::Payloads::Shares do
   describe "#to_json" do
     context "when entity parameter is given" do
       it "responds successfully with a JSON object" do
-        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\",\"thumbnails\":[{\"resolvedUrl\":null}]}]},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
+        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\"}]},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
         body = payload.new(default_attrs)
 
         result = body.to_json
@@ -31,7 +31,7 @@ describe LinkedinV2::Templates::Payloads::Shares do
 
     context "when text parameter is given" do
       it "responds successfully with a JSON object" do
-        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\",\"thumbnails\":[{\"resolvedUrl\":null}]}]},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
+        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\"}]},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
         body = payload.new(default_attrs)
 
         result = body.to_json
@@ -53,7 +53,7 @@ describe LinkedinV2::Templates::Payloads::Shares do
 
     context "when url parameter is given" do
       it "responds successfully with a JSON object" do
-        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\",\"thumbnails\":[{\"resolvedUrl\":null}]}]},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
+        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\"}]},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
         body = payload.new(default_attrs)
 
         result = body.to_json
@@ -75,7 +75,7 @@ describe LinkedinV2::Templates::Payloads::Shares do
 
     context "when identifier parameter is given" do
       it "responds successfully with a JSON object" do
-        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\",\"thumbnails\":[{\"resolvedUrl\":null}]}]},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
+        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\"}]},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
         body = payload.new(default_attrs)
 
         result = body.to_json
@@ -109,7 +109,7 @@ describe LinkedinV2::Templates::Payloads::Shares do
 
     context "when thumbnail parameter is not given" do
       it "responds successfully with a JSON object" do
-        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\",\"thumbnails\":[{\"resolvedUrl\":null}]}]},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
+        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\"}]},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
         body = payload.new(default_attrs)
 
         result = body.to_json
@@ -121,7 +121,7 @@ describe LinkedinV2::Templates::Payloads::Shares do
     context "when title parameter is given" do
       it "responds successfully with a JSON object" do
         default_attrs.merge!({ title: "title" })
-        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\",\"thumbnails\":[{\"resolvedUrl\":null}]}],\"title\":\"title\"},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
+        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\"}],\"title\":\"title\"},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
         body = payload.new(default_attrs)
 
         result = body.to_json
@@ -132,7 +132,7 @@ describe LinkedinV2::Templates::Payloads::Shares do
 
     context "when title parameter is not given" do
       it "responds successfully with a JSON object" do
-        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\",\"thumbnails\":[{\"resolvedUrl\":null}]}]},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
+        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\"}]},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
         body = payload.new(default_attrs)
 
         result = body.to_json
@@ -144,7 +144,7 @@ describe LinkedinV2::Templates::Payloads::Shares do
     context "when description parameter is given" do
       it "responds successfully with a JSON object" do
         default_attrs.merge!(description: "description")
-        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\",\"thumbnails\":[{\"resolvedUrl\":null}]}],\"description\":\"description\"},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
+        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\"}],\"description\":\"description\"},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
         body = payload.new(default_attrs)
 
         result = body.to_json
@@ -155,7 +155,7 @@ describe LinkedinV2::Templates::Payloads::Shares do
 
     context "when description parameter is not given" do
       it "responds successfully with a JSON object" do
-        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\",\"thumbnails\":[{\"resolvedUrl\":null}]}]},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
+        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\"}]},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
         body = payload.new(default_attrs)
 
         result = body.to_json
@@ -168,7 +168,7 @@ describe LinkedinV2::Templates::Payloads::Shares do
       it "responds successfully with a JSON object" do
         default_attrs.merge!(description: "description")
         default_attrs.merge!(title: "title")
-        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\",\"thumbnails\":[{\"resolvedUrl\":null}]}],\"description\":\"description\",\"title\":\"title\"},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
+        expected_response = "{\"owner\":\"urn:li:entity:identifier\",\"content\":{\"contentEntities\":[{\"entityLocation\":\"url\"}],\"description\":\"description\",\"title\":\"title\"},\"distribution\":{\"linkedInDistributionTarget\":{}},\"text\":{\"text\":\"text\"}}"
         body = payload.new(default_attrs)
 
         result = body.to_json

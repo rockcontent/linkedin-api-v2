@@ -31,12 +31,7 @@ module LinkedinV2
               "contentEntities" => [
                 {
                   "entityLocation" => url,
-                  "thumbnails" => [
-                    {
-                      "resolvedUrl": thumbnail,
-                    }
-                  ],
-                }
+                }.merge(thumbnail_attribute)
               ]
             },
             "distribution" => {
@@ -76,6 +71,18 @@ module LinkedinV2
 
         def description
           options.fetch(:description, nil)
+        end
+
+        def thumbnail_attribute
+          return {} if thumbnail.to_s.empty?
+
+          {
+            "thumbnails" => [
+              {
+                "resolvedUrl": thumbnail,
+              }
+            ],
+          }
         end
 
         def description_attribute
