@@ -214,6 +214,16 @@ describe LinkedinV2::Url::Builder do
           expect(result).to eq(expected_response)
         end
       end
+
+      describe "#register_asset_upload" do
+        it "succeeds" do
+          expected_response = "/assets?action=registerUpload"
+
+          result = builder.(:register_asset_upload)
+
+          expect(result).to eq(expected_response)
+        end
+      end
     end
 
     context "when url not found" do
