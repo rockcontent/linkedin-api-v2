@@ -12,6 +12,12 @@ module LinkedinV2
         request(:get, path)
       end
 
+      def upload_profile_asset(**options)
+        attrs = options.merge(entity: PROFILE_ENTITY)
+
+        upload_asset(attrs)
+      end
+
       def add_profile_share(**options)
         attrs = options.merge(entity: PROFILE_ENTITY)
         body = LinkedinV2::Templates::Payloads::Shares.new(attrs)
