@@ -752,6 +752,24 @@ describe LinkedinV2::Client do
           end
         end
       end
+
+      describe "#upload_company_asset" do
+        context "with valid token", vcr: { cassette_name: "api/upload_company_asset", preserve_exact_body_bytes: true } do
+          context "when all required parameters are present" do
+            it "successfully share on LinkedIn" do
+              params = {
+                identifier: "22302249",
+                asset_url: "https://rc2-development.s3.us-west-2.amazonaws.com/cache/974e945d0c2a041bc6c46f4dbbfa1871.jpeg",
+              }
+              client = LinkedinV2::Client.new(token: valid_token)
+
+              result = client.upload_company_asset(params)
+
+              expect(result).to match("urn:li:digitalmediaAsset:C4D22AQFGiX6CaMmU5A")
+            end
+          end
+        end
+      end
     end
 
     describe ".PROFILES" do
@@ -1140,6 +1158,24 @@ describe LinkedinV2::Client do
             expect {
               client.add_profile_post(params)
             }.to raise_error(LinkedinV2::LinkedinResponseError)
+          end
+        end
+      end
+
+      describe "#upload_profile_asset" do
+        context "with valid token", vcr: { cassette_name: "api/upload_profile_asset", preserve_exact_body_bytes: true } do
+          context "when all required parameters are present" do
+            it "successfully share on LinkedIn" do
+              params = {
+                identifier: "zdUs3lzI6l",
+                asset_url: "https://rc2-development.s3.us-west-2.amazonaws.com/cache/974e945d0c2a041bc6c46f4dbbfa1871.jpeg",
+              }
+              client = LinkedinV2::Client.new(token: valid_token)
+
+              result = client.upload_profile_asset(params)
+
+              expect(result).to match("urn:li:digitalmediaAsset:C4D22AQGSZ9lvI5Qdvw")
+            end
           end
         end
       end

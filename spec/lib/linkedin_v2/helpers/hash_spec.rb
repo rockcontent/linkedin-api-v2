@@ -3,6 +3,28 @@ require "spec_helper"
 describe LinkedinV2::Helpers::Hash do
   subject(:helper) { described_class }
 
+  describe ".get_deep" do
+    context "when given path exists" do
+      it "returns value" do
+        deep_hash = { foo: { bar: "hello" } }
+
+        result = helper.get_deep(deep_hash, :foo, :bar)
+
+        expect(result).to eq("hello")
+      end
+    end
+
+    context "when given path does not exists" do
+      it "returns nil" do
+        deep_hash = { foo: { bar: "hello" } }
+
+        result = helper.get_deep(deep_hash, :foo, :bla)
+
+        expect(result).to eq(nil)
+      end
+    end
+  end
+
   describe ".deep_merge" do
     context "when values from same key are Hash object" do
       it "returns hash merged on first level" do

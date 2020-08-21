@@ -21,6 +21,12 @@ module LinkedinV2
         request(:get, path)
       end
 
+      def upload_company_asset(**options)
+        attrs = options.merge(entity: ORGANIZATION_ENTITY)
+
+        upload_asset(attrs)
+      end
+
       def add_company_share(**options)
         attrs = options.merge(entity: ORGANIZATION_ENTITY)
         body = LinkedinV2::Templates::Payloads::Shares.new(attrs)
