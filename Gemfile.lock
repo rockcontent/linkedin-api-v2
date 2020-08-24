@@ -58,7 +58,7 @@ GEM
     psych (3.1.0)
     public_suffix (3.1.1)
     rainbow (3.0.0)
-    rake (10.5.0)
+    rake (13.0.1)
     reek (5.4.0)
       codeclimate-engine-rb (~> 0.4.0)
       kwalify (~> 0.7.0)
@@ -124,7 +124,7 @@ DEPENDENCIES
   coveralls (~> 0.8.23)
   linkedin_v2!
   pry (~> 0.12.2)
-  rake (~> 10.0)
+  rake (~> 13.0)
   reek (~> 5.4)
   rspec (~> 3.0)
   rubocop (~> 0.73.0)
